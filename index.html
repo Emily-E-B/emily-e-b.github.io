@@ -10,9 +10,9 @@
 </head>
 <body>
   <header>
-    <nav>
+    <nav class="hide_mobile">
       <ul class="nav-links">
-        <li class="right_space"><a href="#home"><img class="nav_logo" src="images/logo.png" alt="Amazon"></a></li>
+        <li class="right_space"><a href="/index.html"><img class="nav_logo" src="images/logo.png" alt="emily bhola logo"></a></li>
         <li class="nav_title"><a href="catalogue.html">Catalogue</a></li>
         <li class="nav_title"><a href="#journals">Journals</a></li>
         <li class="nav_title"><a href="#about">About</a></li>
@@ -21,6 +21,16 @@
         <li><a href="https://www.amazon.com/stores/author/B09Z1BFC3C/about?ccs_id=535cca0a-52b9-4f6b-9a0d-5312bcc578fe" target="_blank" rel="noopener"><img src="https://img.icons8.com/ios-filled/20/ffffff/amazon.png" alt="Amazon"></a></li>
       </ul>
     </nav>
+
+    <div class="hide_desktop mobile-nav-bar">
+      <a href="/index.html"><img class="nav_logo" src="images/logo.png" alt="emily bhola logo"></a>
+      <div onclick="change_look()" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+    </div>
+    
   </header>
 
   <main>

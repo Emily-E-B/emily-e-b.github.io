@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Catalogue</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css"/>
+  
   <style>
     body {
       margin: 0;
@@ -85,13 +88,20 @@
   </style>
 </head>
 <body>
-  <header>
-    <a href="index.html">Home</a>
-    <a href="catalogue.html" style="color:#f9f0e0">Catalogue</a>
-    <a href="index.html#about">About</a>
-    <a href="index.html#journals">Journals</a>
-    <a href="index.html#contact">Contact</a>
+ <header>
+    <nav>
+      <ul class="nav-links">
+        <li class="right_space"><a href="/index.html"><img class="nav_logo" src="images/logo.png" alt="Amazon"></a></li>
+        <li class="nav_title"><a href="catalogue.html">Catalogue</a></li>
+        <li class="nav_title"><a href="#journals">Journals</a></li>
+        <li class="nav_title"><a href="#about">About</a></li>
+        <li class="nav_title"><a href="#contact">Contact</a></li>
+        <li class="left_space"><a href="https://www.instagram.com/emilybhola.tt/" target="_blank"><img src="https://img.icons8.com/ios/20/ffffff/instagram-new.png" alt="Instagram"></a></li>
+        <li><a href="https://www.amazon.com/stores/author/B09Z1BFC3C/about?ccs_id=535cca0a-52b9-4f6b-9a0d-5312bcc578fe" target="_blank" rel="noopener"><img src="https://img.icons8.com/ios-filled/20/ffffff/amazon.png" alt="Amazon"></a></li>
+      </ul>
+    </nav>
   </header>
+
 
   <section class="section">
     <h1>Catalogue</h1>
@@ -135,5 +145,46 @@
       </div>
     </div>
   </section>
+
+<footer>
+  <div class="footer_top">
+    <div class="footer_box">
+        <h1 class="footer_title">Navigate</h1>
+         <hr class="footer_spacer"/>
+        <a class="footer_nav_links" href="#home">         Home     </a>
+        <a class="footer_nav_links" href="catalogue.html">Catalogue</a>
+        <a class="footer_nav_links" href="#about">        About    </a>
+        <a class="footer_nav_links" href="#journals">     Journals </a>
+        <a class="footer_nav_links" href="#contact">      Contact  </a>
+    </div>
+    <div class="footer_box">
+      <h1 class="footer_title">Contact</h1>
+       <hr class="footer_spacer"/>
+      <a class="footer_nav_links footer_contact_link" href="mailto:emilybhola.author.tt@gmail.com">
+        <img src="https://img.icons8.com/ios-glyphs/20/ffffff/new-post.png" alt="Email" style="vertical-align:middle; margin-right:8px;">
+        emilybhola.author.tt@gmail.com
+      </a>
+      <a class="footer_nav_links footer_contact_link" href="https://www.instagram.com/emilybhola.tt/" target="_blank">
+        <img src="https://img.icons8.com/ios/20/ffffff/instagram-new.png" alt="Instagram" style="vertical-align:middle; margin-right:8px;">
+        Instagram | @emilybhola.tt
+      </a>
+      <a class="footer_nav_links footer_contact_link" href="https://www.amazon.com/stores/author/B09Z1BFC3C/about?ccs_id=535cca0a-52b9-4f6b-9a0d-5312bcc578fe" target="_blank" rel="noopener">
+        <img src="https://img.icons8.com/ios-filled/20/ffffff/amazon.png" alt="Amazon" style="vertical-align:middle; margin-right:8px;">
+        Amazon Author Page
+      </a>
+    </div>
+     <div class="footer_box">
+      <img class="footer_image" src="images/test.jpg" alt="footer image"/>
+    </div>
+  </div>
+  <div class="footer_bottom">
+    <p>
+      emilybhola.com
+      <span class="spacer_middle"></span>
+      © 2025
+    </p>
+  </div>
+</footer>
+
 </body>
 </html>
