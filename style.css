@@ -54,6 +54,10 @@ nav .nav-links {
   display: flex;
 }
 
+.flex_3{
+  display: flex;
+}
+
 .nav-links a {
   color: #dcdcdc;
   text-decoration: none;
@@ -228,6 +232,7 @@ hr {
   background-color: black;
   display: flex;
   padding-left: 60px;
+  padding-top: 20px;
 }
 
 .footer_title{
@@ -423,9 +428,7 @@ hr {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1.5rem;
-  height: 70px;
-  //background: rgba(26, 26, 26, 0.7);
+  height: 60px;
   position: relative;
   z-index: 1001;
 }
@@ -537,7 +540,7 @@ hr {
     display: block;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
   .hide_desktop {
     display: flex !important; /* show mobile nav bar */
   }
@@ -568,6 +571,7 @@ hr {
   .footer_box{
     flex: 1;
     padding: 30px;
+    padding-bottom: 0px;
     display: flex;
     flex-direction: column;
   }
@@ -615,8 +619,65 @@ hr {
   }
 
   .CTA {
-    padding-top: 50px;
+    padding-top: 280px;
     padding-left: 0px;
+  }
+
+  .hero-bottom {
+    height: 90vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+  }
+
+  .flex{
+    display: flex;
+    justify-content: center;
+  }
+
+  .flex_3{
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .small-text {
+    text-align: center;
+  }
+
+  .gr_logo{
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 50px;
+    margin-bottom: 20px;
+  }
+
+  .fancy-button {
+    width: 100%;
+  }
+
+  .section_title{
+    padding-top: 15%;
+  }
+
+  .about-author{
+    flex-direction: column;
+  }
+
+  .about-hobbyist {
+    flex-direction: column-reverse;
+  }
+
+  .text-container {
+    padding-bottom: 15%;
+  }
+
+  .swiper_holder{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .footer_image{
+    width: 100%;
   }
 
 }
