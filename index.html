@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Emily Bhola - Author</title>
+  <title>Emily Bhola | Author</title>
   <link rel="icon" href="images/tabicon.png">
   <link rel="stylesheet" href="style.css"/>
   <!-- Swiper -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
-  <header>
+  <header id="header">
     <nav class="hide_mobile">
       <ul class="nav-links">
         <li class="right_space"><a href="/index.html"><img class="nav_logo" src="images/logo.png" alt="emily bhola logo"></a></li>
@@ -22,52 +22,52 @@
         <li><a href="https://www.amazon.com/stores/author/B09Z1BFC3C/about?ccs_id=535cca0a-52b9-4f6b-9a0d-5312bcc578fe" target="_blank" rel="noopener"><img src="https://img.icons8.com/ios-filled/20/ffffff/amazon.png" alt="Amazon"></a></li>
       </ul>
     </nav>
-
     <div class="hide_desktop mobile-nav-bar">
-      <a href="/index.html"><img class="nav_logo" src="images/logo.png" alt="emily bhola logo"></a>
+      <a href="/index.html"><img class="nav_logo" src="images/logo.png" alt="emily bhola logo" id="mobile_img_1"></a>
       <div onclick="change_look()" id="hamburger">
           <span></span>
           <span></span>
           <span></span>
       </div>
     </div>
-
-        <!-- Sidebar Nav
-         <div id="nav_side_holder" class="nav_side_holder">
-            <div id="side_menu" class="nav">
-                <div class="mobile_nav">
-                    <div class="nav_name_holder">
-                        <h1 class="nav_name"> Kyle Awah </h1>
-                        <span class="nav_small_txt"> (BSc. Hons)</span>
-                    </div>
-                    <p class="mobile_para">
-                        Hey! 👋🏼 i'm Kyle, a mobile & fullstack web developer from the little island of Trinidad 🇹🇹 in the Caribbean.
-                    </p>
-                    <h1 class="mobile_spacer">____________</h1>
-                    <div class="project_holder_2">
-                        <h4 class="push_l"> 🌗 Dark Mode </h4>
-                        <label class="switch down">
-                            <input type="checkbox" onclick="toggleDarkMode()">
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
-                    <div class="table">
-                        <img id="github_icon" onclick="window.open('https://github.com/kyleAwah/')" class="nav_icons_1" src="https://img.icons8.com/?size=100&id=YSWCDCSF4H3N&format=png&color=000000" />
-                        <img id="linkedin_icon" onclick="window.open('https://www.linkedin.com/in/kyleawah/')" class="nav_icons" src="https://img.icons8.com/?size=100&id=8808&format=png&color=000000" />
-                        <a href="mailto:kyawah@gmail.com">
-                            <img id="email_icon" class="nav_icons before_credits_icon" src="https://img.icons8.com/?size=100&id=YRRhCXfA0Vd0&format=png&color=000000" />
-                        </a>
-                    </div>               
-                    <div class="footer_para_2">
-                        Crafted with
-                        <span class="line_through">a keyboard ⌨️</span> love ❤️
-                        <br>
-                        2024
-                    </div>                    
+    <!-- Sidebar Nav -->
+     <div id="nav_side_holder" class="nav_side_holder">
+        <div id="side_menu" class="nav">
+            <div class="mobile_nav">
+                <a href="/index.html"><img class="nav_logo" src="images/logo.png" alt="emily bhola logo"></a>
+                <br><br><br>
+                <div class="flex_3">
+                    <a class="sidebar_nav_links" href="catalogue.html">Catalogue</a>
+                    <a class="sidebar_nav_links" href="#about">        About    </a>
+                    <a class="sidebar_nav_links" href="#journals">     Journals </a>
+                    <a class="sidebar_nav_links" href="#contact">      Contact  </a>
                 </div>
+                <div class="flex_3">
+                  <br><br>
+                   <hr class="footer_spacer"/>
+                  <a class="sidebar_nav_links_2" href="mailto:emilybhola.author.tt@gmail.com">
+                    <img src="https://img.icons8.com/ios-glyphs/20/ffffff/new-post.png" alt="Email" style="vertical-align:middle; margin-right:8px;">
+                    emilybhola.author.tt@gmail.com
+                  </a>
+                  <a class="sidebar_nav_links_2" href="https://www.instagram.com/emilybhola.tt/" target="_blank">
+                    <img src="https://img.icons8.com/ios/20/ffffff/instagram-new.png" alt="Instagram" style="vertical-align:middle; margin-right:8px;">
+                    Instagram | @emilybhola.tt
+                  </a>
+                  <a class="sidebar_nav_links_2" href="https://www.amazon.com/stores/author/B09Z1BFC3C/about?ccs_id=535cca0a-52b9-4f6b-9a0d-5312bcc578fe" target="_blank" rel="noopener">
+                    <img src="https://img.icons8.com/ios-filled/20/ffffff/amazon.png" alt="Amazon" style="vertical-align:middle; margin-right:8px;">
+                    Amazon Author Page
+                  </a>
+                </div>
+                <br>
+                <div class="footer_para_2">
+                     emilybhola.com
+                    <br>
+                    © 2025
+                </div>                    
             </div>
         </div>
-        Sidebar Nav -->
+    </div>
+    <!-- Sidebar Nav -->
   </header>
 
   <main>
@@ -223,6 +223,47 @@
   document.querySelectorAll('.swiper-pagination, .swiper-button-prev, .swiper-button-next').forEach(el => {
     el.style.display = 'none';
   });
+</script>
+<script>
+function change_look() {
+  var nav_btn = document.getElementById('hamburger');
+  var nav = document.getElementById('nav_side_holder');
+  var mobile_img_1 = document.getElementById('mobile_img_1');
+  var header = document.getElementById('header');
+
+  // Function to close the navigation
+  function closeNav() {
+    nav.style.display = "none";
+    mobile_img_1.style.display = "block";
+    header.style.background = "rgba(26, 26, 26, 0.7)";
+    header.style.backdropFilter = "blur(12px)";
+    header.style.webkitBackdropFilter = "blur(12px)";
+    header.style.boxShadow = "0 4px 24px rgba(0,0,0,0.3)";
+    header.style.padding = "1rem 2rem";
+    header.style.position = "sticky";
+    header.style.top = "0";
+    header.style.zIndex = "1000";
+    nav_btn.classList.remove("open");
+  }
+
+  // Toggle navigation visibility on hamburger button click
+  if (nav.style.display === "block") {
+    closeNav();
+  } else {
+    nav.style.display = "block";
+    mobile_img_1.style.display = "none";
+    header.style.background = "transparent";
+    header.style.backdropFilter = "none";
+    header.style.webkitBackdropFilter = "none";
+    header.style.boxShadow = "none";
+    nav_btn.classList.add("open");
+  }
+
+  // Close navigation on window resize
+  window.addEventListener('resize', function() {
+    closeNav();
+  });
+}
 </script>
 
 </body>

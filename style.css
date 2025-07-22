@@ -12,7 +12,7 @@ body {
   color: #eaeaea;
 }
 
-header {
+#header {
   background: rgba(26, 26, 26, 0.7);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -21,6 +21,10 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
+}
+
+#nav_side_holder{
+  display: none;
 }
 
 nav .nav-links {
@@ -249,6 +253,24 @@ hr {
 
 .footer_nav_links{
   font-size: 16px;
+  color: white;
+  text-decoration: none;
+  padding-bottom: 20px;
+  font-weight: 100;
+  font-family: 'Futura', 'Playfair Display', serif;
+}
+
+.sidebar_nav_links{
+  font-size: 25px;
+  color: white;
+  text-decoration: none;
+  padding-bottom: 20px;
+  font-weight: 100;
+  font-family: 'Futura', 'Playfair Display', serif;
+}
+
+.sidebar_nav_links_2{
+  font-size: 12px;
   color: white;
   text-decoration: none;
   padding-bottom: 20px;
@@ -540,6 +562,46 @@ hr {
     display: block;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+.nav_side_holder {
+    position: fixed;
+    z-index: 5;
+    right: 0;
+    top: 0;
+    width: 300px;
+}
+
+.nav {
+    height: 100vh;
+    padding: 40px;
+    background: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.9);
+    color: white;
+}
+
+.mobile_nav{
+    padding-top: 70px;
+}
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 1200px) {
   .hide_desktop {
     display: flex !important; /* show mobile nav bar */
@@ -624,7 +686,7 @@ hr {
   }
 
   .hero-bottom {
-    height: 90vh;
+    height: 85vh;
     background-color: black;
     display: flex;
     justify-content: center;
