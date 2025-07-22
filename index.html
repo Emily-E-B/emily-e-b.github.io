@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Emily Bhola - Inside Out & Upside Down</title>
   <link rel="stylesheet" href="style.css"/>
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
   <header>
@@ -22,7 +24,6 @@
   </header>
 
   <main>
-
     <section>
       <div class="hero-top">
         <div class="book"><img src="images/BkCvr.jpg" alt="Book Cover"/></div>
@@ -30,12 +31,20 @@
       </div>
       <div class="hero-bottom">
          <div class="CTA">
-          <p class="small-text">Get it now on Amazon!</p>
+          <div class="flex">
+            <p class="small-text"> Get it now on </p>
+            <img class="amazon_logo" src="images/amazon.png" alt="Amazon">
+            <p class="small-text"> ! </p>
+          </div>
           <div class="buttons">
             <button class="fancy-button" onclick="window.open('https://www.amazon.com/Inside-Out-Upside-Down-Reverse-ebook/dp/B0CDSW3SNV/ref=tmm_kin_swatch_0?_encoding=UTF8&dib_tag=se&dib=eyJ2IjoiMSJ9.6lJWS2ku5BS_uVmvAA3Q5MjTofuGPQu_8b7JyRdfB7iDzaXA8rLutej9h_qmKCrW8AeXovlXFord7I0y7eqAZw.8MY9jNtdALh98RSiVPnA1E8TLQgJ6sTAvMVzT_C_zUw&qid=1743477187&sr=8-1')">Get the eBook</button>
             <button class="fancy-button" onclick="window.open('https://www.amazon.com/Inside-Out-Upside-Down-Reverse/dp/B0CDNPNTPD/ref=tmm_pap_swatch_0?_encoding=UTF8&dib_tag=se&dib=eyJ2IjoiMSJ9.6lJWS2ku5BS_uVmvAA3Q5MjTofuGPQu_8b7JyRdfB7iDzaXA8rLutej9h_qmKCrW8AeXovlXFord7I0y7eqAZw.8MY9jNtdALh98RSiVPnA1E8TLQgJ6sTAvMVzT_C_zUw&qid=1743477187&sr=8-1')">Get the paperback</button>
           </div>
-          <p class="spacer small-text">Read it already? Give it a review!</p>
+          <div class="flex spacer">
+            <p class="small-text">Read it already? Give it a review on</p>
+            <img class="gr_logo" src="images/gr.png" alt="goodreads">
+            <p class="small-text"> ! </p>
+          </div>
           <button class="fancy-button" onclick="window.open('https://www.goodreads.com/book/show/195688301-inside-out-upside-down?from_search=true&from_srp=true&qid=oMNCzmKqtX&rank=1')">Review</button>
         </div>
       </div>
@@ -43,10 +52,10 @@
 
     <section id="about" class="about-author fade-in">
       <div class="img-container">
-        <img src="images/Library.jpeg" alt="Library"/>
+        <img src="images/Library.jpg" alt="Library"/>
       </div>
       <div class="text-container">
-        <h2>As an Author</h2>
+        <h2 class="section_title">As an Author</h2>
         <hr />
         <p class="aaa">
           Among the competitive and vibrant world of literature in the Caribbean, Emily Bhola stands out as The Reverse Poet of Sand and Sea Foam. Giving a modern and innovative twist to traditional poetry, Miss Bhola’s niche enables readers to see the world from different perspectives.
@@ -62,7 +71,7 @@
 
     <section class="about-hobbyist fade-in">
       <div class="text-container">
-        <h2>As a Hobbyist</h2>
+        <h2 class="section_title">As a Hobbyist</h2>
         <hr />
         <p class="aaa">
           Emily Bhola’s leisure does not stop at literature. Her time off is usually spent in either one of two places: in nature, looking for new insect species; or indoors, studying science, technology, art and language.
@@ -76,29 +85,96 @@
       </div>
     </section>
   
-<section id="journals" class="journals-section fade-in">
-  <h2>Field Journals</h2>
-  <div class="carousel">
-    </a>
-    <a href="https://www.amazon.com/Entomologists-Field-Journal-Emily-Bhola/dp/B0F3TTTNLN" target="_blank">
-      <img src="images/EJ.jpg" alt="Entomology Journal">
-    </a>
-    <a href="https://www.amazon.com/Ornithologists-Field-Journal-Emily-Bhola/dp/B0FHWKFQBK" target="_blank">
-      <img src="images/BWJ.jpg" alt="Bird Watcher's Journal">
-    </a>
-  </div>
-</section>
-
-    <section id="contact" class="contact-section fade-in">
-      <h2>Contact</h2>
+    <section id="journals" class="journals-section fade-in">
+      <h2>Field Journals</h2>
+      <div class="swiper_holder">
+      <div class="swiper carousel">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="https://www.amazon.com/Entomologists-Field-Journal-Emily-Bhola/dp/B0F3TTTNLN" target="_blank">
+              <img src="images/EJ.jpg" alt="Entomology Journal">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="https://www.amazon.com/Ornithologists-Field-Journal-Emily-Bhola/dp/B0FHWKFQBK" target="_blank">
+              <img src="images/BWJ.jpg" alt="Bird Watcher's Journal">
+            </a>
+          </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+      </div>
     </section>
-
 </main>
 
-  <footer>
-    <p>© 2025 by Emily Bhola. Powered and secured by Wix.</p>
-  </footer>
+<footer>
+  <div class="footer_top">
+    <div class="footer_box">
+        <h1 class="footer_title">Navigate</h1>
+         <hr class="footer_spacer"/>
+        <a class="footer_nav_links" href="#home">         Home     </a>
+        <a class="footer_nav_links" href="catalogue.html">Catalogue</a>
+        <a class="footer_nav_links" href="#about">        About    </a>
+        <a class="footer_nav_links" href="#journals">     Journals </a>
+        <a class="footer_nav_links" href="#contact">      Contact  </a>
+    </div>
+    <div class="footer_box">
+      <h1 class="footer_title">Contact</h1>
+       <hr class="footer_spacer"/>
+      <a class="footer_nav_links footer_contact_link" href="mailto:emilybhola.author.tt@gmail.com">
+        <img src="https://img.icons8.com/ios-glyphs/20/ffffff/new-post.png" alt="Email" style="vertical-align:middle; margin-right:8px;">
+        emilybhola.author.tt@gmail.com
+      </a>
+      <a class="footer_nav_links footer_contact_link" href="https://www.instagram.com/emilybhola.tt/" target="_blank">
+        <img src="https://img.icons8.com/ios/20/ffffff/instagram-new.png" alt="Instagram" style="vertical-align:middle; margin-right:8px;">
+        Instagram | @emilybhola.tt
+      </a>
+      <a class="footer_nav_links footer_contact_link" href="https://www.amazon.com/stores/author/B09Z1BFC3C/about?ccs_id=535cca0a-52b9-4f6b-9a0d-5312bcc578fe" target="_blank" rel="noopener">
+        <img src="https://img.icons8.com/ios-filled/20/ffffff/amazon.png" alt="Amazon" style="vertical-align:middle; margin-right:8px;">
+        Amazon Author Page
+      </a>
+    </div>
+     <div class="footer_box">
+      <img class="footer_image" src="images/test.jpg" alt="footer image"/>
+    </div>
+  </div>
+  <div class="footer_bottom">
+    <p>
+      emilybhola.com
+      <span class="spacer_middle"></span>
+      © 2025
+    </p>
+  </div>
+</footer>
 
-  <script src="script.js"></script>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.swiper.carousel', {
+    loop: true,
+    effect: 'coverflow',
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: false,
+    },
+    // Remove pagination and navigation
+    slidesPerView: 3,
+    spaceBetween: 5,
+    centeredSlides: true,
+  });
+  // Hide arrows and dots with CSS
+  document.querySelectorAll('.swiper-pagination, .swiper-button-prev, .swiper-button-next').forEach(el => {
+    el.style.display = 'none';
+  });
+</script>
+
 </body>
 </html>
