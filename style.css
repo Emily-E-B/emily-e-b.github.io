@@ -743,3 +743,50 @@ hr {
   }
 
 }
+
+/* Swiper Hero Section Styling */
+.hero-swiper-section {
+  width: 100%;
+  height: 60vh; /* Changed from 100vh to a smaller value */
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper.hero-swiper {
+  width: 100%;
+  height: 100%; /* The Swiper container now fills 100% of the section's height */
+}
+
+.swiper-wrapper {
+  width: 100%;
+  height: 100%; /* The wrapper also fills 100% of the Swiper container's height */
+}
+
+.swiper-slide {
+  width: 100%;
+  height: 100%; /* Each slide now fills 100% of the wrapper's height */
+  display: flex; /* Using flexbox helps to center the image */
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%; /* The image now correctly fills 100% of its slide's dimensions */
+  object-fit:scale-down; /* This is what makes the image scale proportionally and fill the space */
+  object-position: center; /* Ensures the center of the image is always visible */
+}
+
+/* Optional: To make the header stick to the top correctly and not interfere with the slider */
+#header {
+  position: fixed; /* Use fixed positioning for the header to keep it on top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure the header is above everything else */
+}
+
+/* Add a margin to the body to prevent the header from overlapping content */
+body {
+  margin-top: 5rem; /* Adjust this value to the height of your header */
+}
