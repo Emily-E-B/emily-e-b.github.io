@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -68,7 +67,30 @@
       color: #2c2f3a;
       font-weight: bold;
     }
+    .parallax-bg {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background-position: center;
+      background-size: cover;
+    }
+    .swiper.hero-swiper {
+      position: relative;
+    }
+    .hero-swiper-section, .swiper.hero-swiper {
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-img {
+      width: 100%;
+      height: 60%;
+      object-fit: cover;
+      display: block;
+    }
   </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
 </head>
 <body>
   <header id="header">
@@ -132,8 +154,28 @@
   </header>
 
 
+    <!-- Swiper Hero Section -->
+<section class="hero-swiper-section">
+  <div class="swiper hero-swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="images/banner1.jpg" alt="Banner 1" class="hero-img">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/banner2.jpg" alt="Banner 2" class="hero-img">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/banner3.jpeg" alt="Banner 3" class="hero-img">
+      </div>
+    </div>
+    <!-- Removed pagination and navigation -->
+  </div>
+</section>
+<!-- End Swiper Hero Section -->
+
+
   <section class="section">
-    <h1>Catalogue</h1>
+    <h1>Journals</h1>
     <div class="quote-gallery">
       <div class="quote-card">
         <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb" alt="Quote 1"/>
@@ -153,6 +195,8 @@
       </div>
     </div>
   </section>
+
+
 
 <footer>
   <div class="footer_top">
@@ -234,6 +278,20 @@ function change_look() {
     closeNav();
   });
 }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const heroSwiper = new Swiper('.hero-swiper', {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 0,
+    centeredSlides: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    // Remove pagination and navigation
+  });
 </script>
 
 </body>
