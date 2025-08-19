@@ -149,9 +149,12 @@
               <img src="images/BWJ.jpg" alt="Bird Watcher's Journal">
             </a>
           </div>
+          <div class="swiper-slide">
+            <a href="https://www.amazon.com/Mycologists-Field-Journal-Emily-Bhola/dp/B0FLYJ7DZG/ref=sr_1_2?crid=1EEOXYMSGFZAZ&dib=eyJ2IjoiMSJ9.k-nYYE-sEXnMk06usfte61WWh48TInVvj2_WN1Zr5mTyes8YsgSXM7T7a1ahsjli_Hwo-NXUAyJcLmDa7qEsyQ.W34d3L7WknEsl1VYEsit0TQB9baswGWA4yxTP016ubM&dib_tag=se&keywords=emily+bhola&qid=1755024211&sprefix=emily+bhola%2Caps%2C186&sr=8-2" target="_blank">
+              <img src="images/MJ.jpg" alt="Mycology Journal">
+            </a>
+          </div>
         </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
         <!-- Add Navigation -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
@@ -203,27 +206,32 @@
 
 <script src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
 <script>
-  const swiper = new Swiper('.swiper.carousel', {
-    loop: true,
-    effect: 'coverflow',
-    coverflowEffect: {
-      rotate: 50,
-      stretch: 0,
-      depth: 100,
-      modifier: 1,
-      slideShadows: false,
-    },
-    // Remove pagination and navigation
-    slidesPerView: 3,
-    spaceBetween: 5,
-    centeredSlides: true,
-  });
-  // Hide arrows and dots with CSS
-  document.querySelectorAll('.swiper-pagination, .swiper-button-prev, .swiper-button-next').forEach(el => {
-    el.style.display = 'none';
-  });
+const swiper = new Swiper('.swiper.carousel', {
+  loop: false,
+  effect: 'coverflow',
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 10,
+    depth: 100,
+    modifier: 5,
+    slideShadows: false,
+  },
+  slidesPerView: 3,
+  centeredSlides: true,
+  initialSlide: 1,
+  grabCursor: true,
+  navigation: {          // ← add this
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
 </script>
+
+
 <script>
 function change_look() {
   var nav_btn = document.getElementById('hamburger');
