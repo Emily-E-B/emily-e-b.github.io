@@ -206,27 +206,32 @@
 
 <script src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
 <script>
-  const swiper = new Swiper('.swiper.carousel', {
-    loop: true,
-    effect: 'coverflow',
-    coverflowEffect: {
-      rotate: 50,
-      stretch: 0,
-      depth: 100,
-      modifier: 1,
-      slideShadows: false,
-    },
-    // Remove pagination and navigation
-    slidesPerView: 3,
-    spaceBetween: 5,
-    centeredSlides: true,
-  });
-  // Hide arrows and dots with CSS
-  document.querySelectorAll('.swiper-pagination, .swiper-button-prev, .swiper-button-next').forEach(el => {
-    el.style.display = 'none';
-  });
+const swiper = new Swiper('.swiper.carousel', {
+  loop: false,
+  effect: 'coverflow',
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 10,
+    depth: 100,
+    modifier: 5,
+    slideShadows: false,
+  },
+  slidesPerView: 3,
+  centeredSlides: true,
+  initialSlide: 1,
+  grabCursor: true,
+  navigation: {          // ← add this
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
 </script>
+
+
 <script>
 function change_look() {
   var nav_btn = document.getElementById('hamburger');
